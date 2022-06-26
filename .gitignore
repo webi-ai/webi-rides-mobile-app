@@ -32,7 +32,8 @@ node_modules
 
 # production
 /build
-/www/
+www
+
 # npmjs
 /dist
 
