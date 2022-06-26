@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { createBrowserHistory } from "history";
-import { BrowserRouter, Router, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Router, Route, Switch, Redirect } from "react-router-dom";
 
 // core components
 import DriverAuth from "layouts/DriverAuth.js";
@@ -87,7 +87,7 @@ class App extends Component {
         // redirect / to /auth/rider if not logged in with existing account, to dash if logged in
         return (
             <div>
-            <BrowserRouter history={hist}>
+            <HashRouter history={hist}>
                 <Switch>
                     <Route path="/dash/rider">
                         <RiderDash web3={this.state.web3} account={this.state.account}/>
@@ -111,7 +111,7 @@ class App extends Component {
                     <Redirect from="/dash/rider" to="/dash/rider/map" />
                     <Redirect from="/dash/driver" to="/dash/driver/steps" />
                 </Switch>
-            </BrowserRouter>
+            </HashRouter>
             </div>
         );
         // return (
