@@ -5,7 +5,7 @@
         "entrypoint": "public/index.html"
       },
       "source": [
-        "dist"
+        "www"
       ],
       "type": "assets"
     }
